@@ -187,12 +187,12 @@ svg .svg-elem-1{stroke-dashoffset:168405.640625px;stroke-dasharray:168405.640625
 
 .projects { background: #dcb995; }
 .project-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
-.project-card { overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
+.project-card { overflow: hidden; background: var(--surface); }
 .project-image { display: grid; height: 330px; overflow: hidden; place-items: center; background: var(--brown-deep); }
 .project-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s ease; }
 .project-image:hover img { transform: scale(1.04); }
 .project-image-wide img { object-position: left top; }
-.project-body { display: flex; flex-direction: column; min-height: 385px; padding: 1.35rem; }
+.project-body { display: flex; flex-direction: column; min-height: 385px; padding: 1.35rem; border: 1px solid var(--line); border-top: 0; }
 .project-card h3 { margin: 0.65rem 0 0.85rem; font-size: 1.4rem; line-height: 1.16; }
 .project-body > p:not(.project-number) { margin: 0; color: var(--ink-soft); font-size: 0.91rem; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.2rem; }
