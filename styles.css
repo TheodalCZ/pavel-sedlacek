@@ -255,7 +255,7 @@ svg .svg-elem-1{stroke-dashoffset:168405.640625px;stroke-dasharray:168405.640625
 .interest-card:first-child { background: var(--sand); }
 .interest-card:nth-child(2) { background: var(--accent-soft); }
 .interest-card-content { flex: 1; min-height: 335px; padding: 1.7rem; }
-.interest-card .interest-icon { width: 40px; height: 40px; margin-bottom: 2.35rem; object-fit: contain; filter: brightness(0) saturate(100%) invert(21%) sepia(20%) saturate(1356%) hue-rotate(342deg) brightness(89%) contrast(88%); }
+.interest-card .interest-icon { width: 40px; height: 40px; margin-bottom: 1.6rem; object-fit: contain; filter: brightness(0) saturate(100%) invert(21%) sepia(20%) saturate(1356%) hue-rotate(342deg) brightness(89%) contrast(88%); }
 .interest-card h3 { margin: 0.65rem 0 0.7rem; font-size: 1.48rem; line-height: 1.16; }
 .interest-card-content > p:last-child { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
 .interest-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; border-top: 1px solid var(--line); }
