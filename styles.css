@@ -370,7 +370,7 @@ svg .svg-elem-1{stroke-dashoffset:168405.640625px;stroke-dasharray:168405.640625
 }
 .detail-feature a:hover img, .detail-feature a:focus-visible img { transform: scale(1.02); filter: saturate(1.04); }
 .detail-feature h2 { margin-top: 0; font-size: 1.75rem; line-height: 1.18; }
-.detail-file { display: inline-block; margin-top: 1rem; padding: 0.7rem 0.9rem; color: #fff; background: var(--brown); font-size: 0.85rem; font-weight: 800; }
+.detail-file { display: inline-block; margin-top: 1rem; margin-bottom: 0.5rem; padding: 0.7rem 0.9rem; color: #fff; background: var(--brown); font-size: 0.85rem; font-weight: 800; }
 
 @media (max-width: 1050px) {
   .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
