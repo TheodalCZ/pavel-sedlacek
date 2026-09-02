@@ -157,6 +157,33 @@ svg .svg-elem-1{stroke-dashoffset:168405.640625px;stroke-dasharray:168405.640625
 .about-facts span { padding: 0.46rem 0.7rem; color: var(--brown-deep); background: var(--accent-soft); font: 500 0.73rem var(--mono); }
 .hero-profile .about-facts { margin-top: 1rem; }
 .hero-profile .about-facts span { color: #fff0df; background: rgba(255, 240, 216, 0.15); border: 1px solid rgba(255, 240, 216, 0.25); }
+.about-download {
+  position: relative;
+  display: inline-block;
+  width: max-content;
+  margin-top: 1rem;
+  padding-bottom: 0.18rem;
+  color: #e1ae75;
+  font: 500 0.72rem/1.4 var(--mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.about-download::before {
+  position: absolute;
+  right: 0;
+  bottom: 0.06rem;
+  left: 0;
+  height: 2px;
+  background: currentColor;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s ease;
+}
+.about-download:hover::before,
+.about-download:focus-visible::before {
+  transform: scaleX(1);
+}
 
 .projects { background: #dcb995; }
 .project-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; }
