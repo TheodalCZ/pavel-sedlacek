@@ -259,12 +259,14 @@ svg .svg-elem-1{stroke-dashoffset:168405.640625px;stroke-dasharray:168405.640625
 
 .interests { background: #e2c3a2; }
 .interest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-.interest-card { min-height: 335px; padding: 1.7rem; background: var(--surface); border: 1px solid var(--line); }
+.interest-card { display: flex; flex-direction: column; overflow: hidden; background: var(--surface); border: 1px solid var(--line); }
 .interest-card:first-child { background: var(--sand); }
 .interest-card:nth-child(2) { background: var(--accent-soft); }
-.interest-card img { width: 40px; height: 40px; margin-bottom: 2.35rem; object-fit: contain; filter: brightness(0) saturate(100%) invert(21%) sepia(20%) saturate(1356%) hue-rotate(342deg) brightness(89%) contrast(88%); }
+.interest-card-content { flex: 1; min-height: 335px; padding: 1.7rem; }
+.interest-card .interest-icon { width: 40px; height: 40px; margin-bottom: 2.35rem; object-fit: contain; filter: brightness(0) saturate(100%) invert(21%) sepia(20%) saturate(1356%) hue-rotate(342deg) brightness(89%) contrast(88%); }
 .interest-card h3 { margin: 0.65rem 0 0.7rem; font-size: 1.48rem; line-height: 1.16; }
-.interest-card > p:last-child { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+.interest-card-content > p:last-child { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+.interest-image { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center; border-top: 1px solid var(--line); }
 
 .site-footer { padding: 5.5rem 0 1.5rem; color: #fff; background: var(--brown-deep); }
 .site-footer .eyebrow, .contact-list .cv-link { color: #e1ae75; }
@@ -277,11 +279,20 @@ svg .svg-elem-1{stroke-dashoffset:168405.640625px;stroke-dasharray:168405.640625
 .contact-list .cv-link { width: max-content; margin-top: 0.7rem; padding-bottom: 0.2rem; color: #e1ae75; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 1rem; margin-top: 4rem; padding-top: 1.25rem; color: rgba(255, 255, 255, 0.55); border-top: 1px solid rgba(255, 255, 255, 0.2); font: 0.7rem var(--mono); }
 
-.detail-main { padding: 5.5rem 0 7rem; background: var(--paper); }
-.back-link { display: inline-block; margin-bottom: 3rem; color: var(--brown); font-size: 0.88rem; font-weight: 800; }
-.detail-hero { display: grid; grid-template-columns: 1fr 0.9fr; align-items: end; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--line); }
-.detail-hero h1 { max-width: 12ch; margin: 0.65rem 0 0; font-size: clamp(2.5rem, 4vw, 4.5rem); letter-spacing: -0.06em; line-height: 0.96; }
-.detail-intro { max-width: 55ch; margin: 0; color: var(--ink-soft); font-size: 1.12rem; }
+.detail-main { padding: 0 0 7rem; background: var(--paper); }
+.detail-banner { position: relative; overflow: hidden; padding: 4.75rem 0 4rem; background: radial-gradient(ellipse 55% 90% at 90% 0%, rgba(224, 174, 124, 0.22), transparent 68%), linear-gradient(125deg, #4a2919 0%, #6c3d25 52%, #8a5534 100%); }
+.detail-banner .hero-contour { inset: -28% -12%; width: 124%; height: 156%; opacity: 0.5; }
+.detail-banner--weby .hero-contour { transform: rotate(-4deg) scale(1.08); transform-origin: 58% 48%; }
+.detail-banner--mapy .hero-contour { inset: -34% -23% -22% 1%; width: 132%; height: 162%; transform: rotate(7deg); transform-origin: 42% 55%; }
+.detail-banner--design .hero-contour { inset: -18% 1% -38% -25%; width: 132%; height: 150%; transform: rotate(-9deg) scale(1.04); transform-origin: 70% 45%; }
+.detail-banner--thesis .hero-contour { inset: -39% -4% -15% -27%; width: 138%; height: 166%; transform: rotate(4deg) scale(1.12); transform-origin: 36% 62%; }
+.detail-banner .container { position: relative; z-index: 1; }
+.back-link { display: inline-block; margin-bottom: 3rem; color: #e6b987; font-size: 0.88rem; font-weight: 800; }
+.detail-hero { display: grid; grid-template-columns: 1fr 0.9fr; align-items: end; gap: 3rem; }
+.detail-hero .eyebrow { color: #e6b987; }
+.detail-hero h1 { max-width: 12ch; margin: 0.65rem 0 0; color: #fff1dd; font-size: clamp(2.5rem, 4vw, 4.5rem); letter-spacing: -0.06em; line-height: 0.96; }
+.detail-intro { max-width: 55ch; margin: 0; color: rgba(255, 241, 221, 0.8); font-size: 1.12rem; }
+.detail-main > .container { padding-top: 4rem; }
 .detail-subhead { max-width: 68ch; margin-top: 4rem; }
 .detail-subhead--with-preview { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1.1fr); align-items: start; max-width: none; gap: 3rem; }
 .detail-subhead--with-preview > img { width: 100%; max-height: 22rem; object-fit: contain; object-position: center; }

@@ -1,9 +1,9 @@
-const heroContour = document.querySelector('.hero-contour');
-if (heroContour) {
+const heroContours = document.querySelectorAll('.hero-contour');
+heroContours.forEach((heroContour) => {
   requestAnimationFrame(() => {
     heroContour.classList.add('active');
   });
-}
+});
 
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.querySelector('.main-nav');
